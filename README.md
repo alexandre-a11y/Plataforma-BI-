@@ -476,7 +476,7 @@
                  const slaCounts = data.reduce((acc, r) => { acc[r.SLA] = (acc[r.SLA] || 0) + 1; return acc; }, {});
 
                  this.charts.ranking = new Chart('chart-ranking-qualificacoes', { type: 'bar', data: { labels: sortedUsers.map(u=>u[0]), datasets: [{ data: sortedUsers.map(u=>u[1]), backgroundColor: '#1d4ed8' }] }, options: { ...noLegend, indexAxis: 'y' } });
-                 this.charts.sla = new Chart('chart-sla', { type: 'doughnut', data: { labels: Object.keys(slaCounts), datasets: [{ data: Object.values(slaCounts), backgroundColor: ['#22c55e', '#ef4444'] }] }, options: { ...commonOptions, plugins: { legend: { position: 'bottom' } } } });
+                 this.charts.sla = new Chart('chart-sla', { type: 'doughnut', data: { labels: Object.keys(slaCounts), datasets: [{ data: Object.values(slaCounts), backgroundColor: ['#22c55e', '#ef4444'] }] }, options: { ...commonOptions, plugins: { legend: { position: 'bottom } } } });
                  this.charts.laudo = new Chart('chart-laudo', { type: 'doughnut', data: { labels: ['Aprovado', 'Reprovado'], datasets: [{ data: [63, 37], backgroundColor: ['#22c55e', '#ef4444'] }] }, options: { ...commonOptions, plugins: { legend: { position: 'bottom' } } } });
             }
         };
